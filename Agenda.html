@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Guia de Pesca Santos</title>
+    <link href="css/Style.css" rel="stylesheet " />
+        <style>
+            .img1 { height: 150px;width:150px;object-fit:cover;float:left;
+                        }
+              .menu  { display:flex ;   align-items:center;  }
+              section { display: flex; flex-direction: row ; } 
+            
+
+            main { height: 80vh;  width: 90vw;
+                   margin: 10px;    }
+            
+            aside { height: 80vh; width: 100px;
+                    display: flex; flex-wrap: wrap;}
+            .icom img { align-items: center; width:40%; margin: 10px; display: flex; 
+                        border-radius: 50%;     }
+
+            @media (max-width:450px){
+
+                aside {   width: 150px;  }
+                .icom img { align-items: center; margin: 1px; border-radius: 50%;  
+                                       }
+                .logo { width:25%;    text-align:right; display:flex;}
+                .img1 { height: 100px;width:100px;object-fit:cover;float:center; 
+                            }
+                
+            }  
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            .contenedor { background-color: khaki; height: 100vh; margin: 5%;
+                display: flex; flex-direction: column; justify-content: center;
+                align-items: center;
+            }
+        </style>
+<script>
+function setIframeSource() {
+    var theSelect = document.getElementById('location');
+    var theIframe = document.getElementById('myIframe');
+    var theUrl;
+
+    theUrl = theSelect.options[theSelect.selectedIndex].value;
+    theIframe.src = theUrl;
+}
+</script>
+    <meta name="viewport" content="width=device-width", initial-scale=1.0, maxime-scale=1.0>
+</head>
+<body>
+    <header>
+       <div class="center">
+           <div class="logo">
+                <a href="index2.html">
+                <img src="img/logoDan.jpeg"  class="img1"/>
+                </a>
+           </div><!--Logo-->
+         
+        <div class="menu"><!--Menu-->
+            <a href="index2.html">Roteiro</a>
+            <a href="Embarcacoes.html">Embarcacoes</a>
+            <a href="Agenda.html">Agenda</a>
+            <a href="Galleria.html">Galeria</a>
+            <a href="Contato.html">Contato</a>
+         </div>
+  <div class="agbarcos">
+
+         <form id="form1" method="post" id="pergunta">
+             <label> Voce nao fica de fora com a gente, o Guia Daniel sempre temos vaga para voce e sua turma !!!,
+                 consulta datas diposmiveis em nossos 3 barcos Xalana , YU, Free Willy;
+             </label>
+             <select id="location" onchange="setIframeSource()" > 
+             <option value="https://calendar.google.com/calendar/embed?src=2fh7ru77tgsg9ucevcmo6i16h8%40group.calendar.google.com&ctz=America%2FSao_Paulo" >Xalana</option> 
+             <option value="https://calendar.google.com/calendar/embed?src=01e228600af2419e30604cf3594efaa1d44679aecfc7f59d6c440b0c0c1a2d5c%40group.calendar.google.com&ctz=America%2FSao_Paulo">YU</option> 
+             <option value="https://calendar.google.com/calendar/embed?src=9a7fa30db23f1378589e5aeb9d2c3993ae5010b1775b0db1d7a845121a277d86%40group.calendar.google.com&ctz=America%2FSao_Paulo">Free Willy</option> 
+             </select>
+             </label>
+
+         </form>
+     </div> 
+        </div>
+        
+    </header>
+    <section>
+        <main>
+                <div class="contenedor">
+                    <iframe id="myIframe" src="https://calendar.google.com/calendar/embed?src=2fh7ru77tgsg9ucevcmo6i16h8%40group.calendar.google.com&ctz=America%2FSao_Paulo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>     
+                </div>
+        </main>
+        <aside>
+            <div class="icom">
+                                <a href="https://wa.me//5511950758677?text=Ola!Voce_Gostaria_de_Pescar_com_a_gente" target="_blank">
+            
+                                    <img src="img/whatsapp.png" width="100" hight="100" alt="Ligue no Nosso WhatsApp" title="Fale Conosco " />
+                                </a>
+                            
+                                <a href="https://www.facebook.com/guiadepescaesportivasantos?mibextid=ZbWKwL" target="_blank">
+            
+                                    <img src="img/facebook.png" width="100" hight="100" alt="Facebook" title="Facebook" />
+                                </a>
+                                
+                                <a href="https://instagram.com/guiadepescasantos?igshid=ZDdkNTZiNTM=" target="_blank">
+            
+                                    <img src="img/instagram.png" width="100" hight="100" alt="Instagram" title="Instagram" />
+                                </a>
+            </div>
+        </aside>
+        
+    </section>
+</body>
+</html>
